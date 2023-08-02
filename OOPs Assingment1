@@ -1,0 +1,353 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "d4894120-337b-4331-a250-e6c1e5c362f4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Q1"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "03815efb-c526-431e-9845-b062531488b7",
+   "metadata": {},
+   "source": [
+    "A class is considered as a blueprint of objects. We can think of the class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows, etc. Based on these descriptions we build the house. House is the object.\n",
+    "\n",
+    "Since many houses can be made from the same description, we can create many objects from a class."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "34d169e8-0a5f-4b34-8237-7e50955fff5e",
+   "metadata": {},
+   "source": [
+    "We use the class keyword to create a class in Python. \n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d2a32e04-0ad7-40f0-ad42-bdbadd945893",
+   "metadata": {},
+   "source": [
+    "An object is called an instance of a class. For example, suppose Bike is a class then we can create objects like bike1, bike2, etc from the class.\n",
+    "\n",
+    "Here's the syntax to create an object."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "337ba26a-b0c9-4834-ac3f-f62934e05c71",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Name: Mountain Bike, Gears: 11 \n"
+     ]
+    }
+   ],
+   "source": [
+    "# define a class\n",
+    "class Bike:\n",
+    "    name = \"\"\n",
+    "    gear = 0\n",
+    "\n",
+    "# create object of class\n",
+    "bike1 = Bike()\n",
+    "\n",
+    "# access attributes and assign new values\n",
+    "bike1.gear = 11\n",
+    "bike1.name = \"Mountain Bike\"\n",
+    "\n",
+    "print(f\"Name: {bike1.name}, Gears: {bike1.gear} \")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "8f0ffbdf-789b-4034-8de1-80d1f0589dbc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Q2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "faf34c9a-0ffa-4970-93f6-a2338f8ed55a",
+   "metadata": {},
+   "source": [
+    "The four pillars of  OOPs (object-oriented programming) are data abstraction, encapsulation, inheritance, and polymorphism. \n",
+    "\n",
+    "1Data abstraction is the process of hiding unnecessary details of an object’s internal structure. By abstracting an object’s data, its structure and behavior can be kept separate and more easily understood.\n",
+    "2Encapsulation is the process of wrapping data and related functions into a single unit (object). Encapsulation limits access to object data and methods, preventing their misuse and ensuring their proper functioning.\n",
+    "3Inheritance is the ability to create a new class (child class) from an existing one (parent class). The child class typically inherits the attributes (members and methods) of the parent class, although it can also redefine them. \n",
+    "4Polymorphism is the ability of an object to take on multiple forms. This allows objects of different classes to be used interchangeably, as long as they implement a certain interface (have methods of the same name)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "0359f4b5-74b6-4ae1-93b8-215a7c4e3ec5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Q3"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e196c33c-af1b-4772-9887-c3a2bdd0b5d5",
+   "metadata": {},
+   "source": [
+    "The __init__ method is the Python equivalent of the C++ constructor in an object-oriented approach. The __init__  function is called every time an object is created from a class. The __init__ method lets the class initialize the object’s attributes and serves no other purpose. It is only used within classes. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "562717c3-397d-4ce0-95f2-bd11ccd523fb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello, my name is Sourabh\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Person:\n",
+    "\n",
+    "\tdef __init__(self, name):\n",
+    "\t\tself.name = name\n",
+    "\n",
+    "\tdef say_hi(self):\n",
+    "\t\tprint('Hello, my name is', self.name)\n",
+    "\n",
+    "\n",
+    "p = Person('Sourabh')\n",
+    "p.say_hi()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "2dd66392-ab6a-4209-9e85-82f56c02ee9b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Q4"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9c86c75b-1a07-498a-a90a-3cc64109ffd4",
+   "metadata": {},
+   "source": [
+    "The self variable is used to represent the instance of the class which is often used in object-oriented programming. It works as a reference to the object. Python uses the self parameter to refer to instance attributes and methods of the class."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "16532fc1-af6e-45d0-92c6-11ec8c250af6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Q5"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5462f690-4a89-41cf-b241-c62d2cd0c734",
+   "metadata": {},
+   "source": [
+    "In object-oriented programming (OOP), inheritance is a mechanism that allows a class to inherit properties and behaviors from another class. It is a fundamental concept in OOP that promotes code reuse and establishes relationships between classes.\n",
+    "\n",
+    "Inheritance is based on a hierarchical relationship between classes, where a derived class (also known as a subclass or child class) inherits the characteristics of a base class (also known as a superclass or parent class). The derived class extends the functionality of the base class by adding new features or overriding existing ones.\n",
+    "\n",
+    "The key idea behind inheritance is that the derived class inherits all the attributes (data members) and behaviors (methods) of the base class, and it can also introduce its own specific attributes and behaviors. This allows for creating a hierarchy of classes with increasing specialization."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c6faf267-413b-40d9-8de2-b511b7bdafab",
+   "metadata": {},
+   "source": [
+    "Single Inheritance\n",
+    "This is a form of inheritance in which a class inherits only one parent class. This is the simple form of inheritance and hence, is also referred to as simple inheritance."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "a45aa2fc-75a2-4ae9-afac-d6103e49a9ee",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Function of parent class.\n",
+      "Function of child class.\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Parent:\n",
+    "  def f1(self):\n",
+    "    print(\"Function of parent class.\")\n",
+    "\n",
+    "class Child(Parent):\n",
+    "  def f2(self):\n",
+    "    print(\"Function of child class.\")\n",
+    "\n",
+    "object1 = Child()\n",
+    "object1.f1()\n",
+    "object1.f2()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "599aff55-801d-4427-a7fb-afb8fc4b8ef8",
+   "metadata": {},
+   "source": [
+    "Multiple Inheritance\n",
+    "An inheritance becomes multiple inheritances when a class inherits more than one parent class. The child class, after inheriting properties from various parent classes, has access to all of its objects."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "e1708614-338c-403b-b45c-48e588a640de",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Function of parent_1 class.\n",
+      "Function of parent_2 class.\n",
+      "function of parent_3 class.\n",
+      "Function of child class.\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Parent_1:\n",
+    "  def f1(self):\n",
+    "    print(\"Function of parent_1 class.\")\n",
+    "\n",
+    "class Parent_2:\n",
+    "  def f2(self):\n",
+    "    print(\"Function of parent_2 class.\")\n",
+    "\n",
+    "class Parent_3:\n",
+    "  def f3(self):\n",
+    "    print(\"function of parent_3 class.\")\n",
+    "\n",
+    "class Child(Parent_1, Parent_2, Parent_3):\n",
+    "  def f4(self):\n",
+    "    print(\"Function of child class.\")\n",
+    "\n",
+    "object_1 = Child()\n",
+    "object_1.f1()\n",
+    "object_1.f2()\n",
+    "object_1.f3()\n",
+    "object_1.f4()\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "219ac540-fdb2-4863-af1c-69309b8ef62a",
+   "metadata": {},
+   "source": [
+    "Multi-level Inheritance\n",
+    "For example, a class_1 is inherited by a class_2, and this class_2 also gets inherited by class_3, and this process goes on. This is known as multi-level inheritance. Let’s understand with an example:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "3973a54a-4769-4fd0-853c-350b887105dd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Function of parent class.\n",
+      "Function of child_1 class.\n",
+      "\n",
+      "\n",
+      "Function of parent class.\n",
+      "Function of child_1 class.\n",
+      "Function of child_2 class.\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Parent:\n",
+    "  def f1(self):\n",
+    "    print(\"Function of parent class.\")\n",
+    "\n",
+    "class Child_1(Parent):\n",
+    "  def f2(self):\n",
+    "    print(\"Function of child_1 class.\")\n",
+    "\n",
+    "class Child_2(Child_1):\n",
+    "  def f3(self):\n",
+    "    print(\"Function of child_2 class.\")\n",
+    "\n",
+    "obj_1 = Child_1()\n",
+    "obj_2 = Child_2()\n",
+    "\n",
+    "obj_1.f1()\n",
+    "obj_1.f2()\n",
+    "\n",
+    "print(\"\\n\")\n",
+    "obj_2.f1()\n",
+    "obj_2.f2()\n",
+    "obj_2.f3()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bc6fccde-cb95-49f0-b74e-80d9e479914a",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
